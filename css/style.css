@@ -1,0 +1,142 @@
+body{
+  background: #1d1d1f;
+  height: 700px;
+  font-family: 'Segoe UI';
+}
+.fancy-nav-toggler{
+  font-size: 50px;
+  color: #ffffff;
+  display: inline-table;
+  padding: 0;
+  margin: 0;
+  width: 75px;
+  height: 75px;
+  text-align: center;
+  box-sizing: border-box;
+  position: fixed;
+}
+.fancy-nav-toggler span.fancy-open.ng-enter,
+.fancy-nav-toggler span.fancy-close.ng-enter{
+  transition: 0s;
+  opacity: 0;
+}
+.fancy-nav-toggler span.fancy-open.ng-enter-active,
+.fancy-nav-toggler span.fancy-close.ng-enter-active{
+  opacity: 1;
+}
+.fancy-nav-toggler span.fancy-open.ng-leave,
+.fancy-nav-toggler span.fancy-close.ng-leave{
+  transition: 0s;
+  opacity: 0;
+}
+.fancy-nav-toggler span.fancy-open.ng-leave-active,
+.fancy-nav-toggler span.fancy-close.ng-leave-active{
+  opacity: 1;
+}
+.fancy-nav-toggler:hover,
+.fancy-nav-toggler:active,
+.fancy-nav-toggler:focus{
+  color: #ffffff;
+  text-decoration: none;
+  background: none;
+  outline: 0
+}
+.fancy-nav{
+  padding: 0;
+  margin: 0;
+  width: 250px;
+  height: 100%;
+  background: #111111;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 101;
+  -webkit-box-shadow: 3px 0 25px #000;
+  -moz-box-shadow: 3px 0 25px #000;
+  -ms-box-shadow: 3px 0 25px #000;
+  -o-box-shadow: 3px 0 25px #000;
+  box-shadow: 3px 0 25px #000;
+  background: -moz-linear-gradient(to left, #151515,#1a1a1a,#202020)
+}
+.fancy-nav.ng-enter{
+  transition: 0.2s;
+  width: 0;
+  opacity: 0;
+}
+.fancy-nav.ng-enter-active{
+  width: 250px;
+  opacity: 1;
+}
+.fancy-nav.ng-enter ul{
+  transition: 0.7s ease;
+  transform: translateX(-100%);
+  opacity: 0;
+}
+.fancy-nav.ng-enter-active ul{
+  transform: translateX(0);
+  opacity: 1;
+}
+.fancy-nav.ng-leave{
+  transition: 0.2s;
+  opacity: 1;
+}
+.fancy-nav.ng-leave-active{
+  width: 0px;
+  opacity: 0;
+}
+.fancy-nav.ng-leave-active ul{
+  transition: 0.1s;
+  opacity: 0;
+}
+.fancy-nav ul{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  margin-top: 20px;
+}
+.fancy-nav ul li{
+  display: block;
+  list-style: none
+}
+.fancy-nav ul li a{
+  padding: 10px 20px;
+  width: 100%;
+  display: inline-table;
+  font-size: 14px;
+  color: #cccccc;
+  border-left: 5px solid transparent;
+  transition: 0.3s;
+}
+.fancy-nav ul li a:hover,
+.fancy-nav ul li a.active{
+  background: #E62A39;
+  color: #ffffff;
+  text-decoration: none;
+  border-left: 5px solid #c51928;
+}
+.fancy-nav-on{
+  position: fixed;
+  left: 260px;
+}
+@media(max-width: 320px){
+  .fancy-nav{
+    width: 200px;
+  }
+  .fancy-nav ul li a{
+    font-size: 12px;
+  }
+  .fancy-nav.ng-enter-active{
+    width: 200px;
+    opacity: 1;
+  }
+  .fancy-nav-toggler{
+    font-size: 45px;
+    left: 0px;
+    width: 66px;
+    height: 70px;
+  }
+  .fancy-nav-on{
+    left: 210px;
+  }
+}

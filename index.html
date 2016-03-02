@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular App</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/angular.js"></script>
+    <script src="js/angular-animate.js"></script>
+    <script type="text/javascript">
+        var app = angular.module('app',['ngAnimate']);
+    </script>
+</head>
+<body ng-init="fancyNav=false">
+
+<div class="fancy-nav" ng-if="fancyNav">
+    <ul class="fancy-menu">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">AngularJS</a></li>
+    </ul>
+</div>
+
+<a href="#" class="fancy-nav-toggler" ng-click="fancyNav==true ? fancyNav=false : fancyNav=true" ng-class="{'fancy-nav-on':fancyNav}">
+<span ng-if="!fancyNav" class="fancy-open">☰</span><span ng-if="fancyNav" class="fancy-close">&times;</span></a>
+
+<div class="container">
+    <p class="text-center description">
+        A Fancy Navigation<br> with 
+        <img src="img/angular.png" width="100px">
+        <span class="text-danger">AngularJS</span>
+    </p>
+</div>
+
+<style type="text/css">
+.description{
+    margin-top: 120px;
+    font-size: 50px;
+}
+
+@media(max-width: 768px){
+    .description{
+        font-size: 40px;
+    }
+    .description img{
+        width: 50px;
+    }
+}
+
+@media(max-width: 640px){
+    .description{
+        font-size: 30px;
+    }
+    .description img{
+        width: 50px;
+    }
+}
+</style>
+
+</body>
+</html>
